@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import { Search as SearchIcon } from "lucide-react";
@@ -72,55 +71,53 @@ const Search = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      <main className="pt-24 px-6 md:px-12 pb-24">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-2xl font-semibold mb-6">Search</h1>
-          
-          <div className="relative mb-8">
-            <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
-            <Input
-              type="text"
-              placeholder="Search for movies, shows..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="pl-10 bg-kisah-gray border-none text-white h-12"
-            />
+      <main className="pt-16 pb-16 px-4">
+        <h1 className="text-xl font-bold mb-4">Search</h1>
+        
+        <div className="relative mb-6">
+          <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+          <Input
+            type="text"
+            placeholder="Search for movies, shows..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className="pl-10 bg-kisah-gray border-none text-white h-10 rounded-full"
+          />
+        </div>
+        
+        {query.trim() === "" ? (
+          <div className="text-center py-8">
+            <p className="text-muted-foreground text-sm">Start typing to search for content</p>
           </div>
-          
-          {query.trim() === "" ? (
-            <div className="text-center py-12">
-              <p className="text-muted-foreground">Start typing to search for content</p>
-            </div>
-          ) : results.length > 0 ? (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-              {results.map((item) => (
-                <Link
-                  key={item.id}
-                  to={`/details/${item.id}`}
-                  className="content-card"
-                >
-                  <div className="aspect-[2/3] relative rounded-md overflow-hidden">
-                    <img
-                      src={item.imageUrl}
-                      alt={item.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 flex items-end transition-opacity p-2">
-                      <div>
-                        <p className="text-sm font-medium">{item.title}</p>
-                        <p className="text-xs text-gray-300 capitalize">{item.type}</p>
-                      </div>
+        ) : results.length > 0 ? (
+          <div className="grid grid-cols-3 gap-3">
+            {results.map((item) => (
+              <Link
+                key={item.id}
+                to={`/details/${item.id}`}
+                className="content-card"
+              >
+                <div className="aspect-[9/16] relative rounded-md overflow-hidden">
+                  <img
+                    src={item.imageUrl}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 flex items-end transition-opacity">
+                    <div className="p-2">
+                      <p className="text-xs font-medium line-clamp-2">{item.title}</p>
+                      <p className="text-[10px] text-gray-300 capitalize">{item.type}</p>
                     </div>
                   </div>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-muted-foreground">No results found for "{query}"</p>
-            </div>
-          )}
-        </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-8">
+            <p className="text-muted-foreground text-sm">No results found for "{query}"</p>
+          </div>
+        )}
       </main>
     </div>
   );

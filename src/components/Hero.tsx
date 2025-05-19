@@ -12,7 +12,7 @@ interface HeroProps {
 
 const Hero = ({ title, description, imageUrl, videoId }: HeroProps) => {
   return (
-    <div className="relative h-[60vh] md:h-[70vh] w-full mb-8">
+    <div className="relative h-[50vh] w-full mb-4">
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -20,24 +20,23 @@ const Hero = ({ title, description, imageUrl, videoId }: HeroProps) => {
           backgroundImage: `url(${imageUrl})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-kisah-dark via-kisah-dark/70 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-kisah-dark to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-kisah-dark via-kisah-dark/80 to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative h-full flex flex-col justify-end p-6 md:p-12 max-w-3xl">
-        <h1 className="text-3xl md:text-5xl font-bold mb-3 animate-fade-in">{title}</h1>
-        <p className="text-sm md:text-base text-muted-foreground mb-6 line-clamp-3 md:line-clamp-4 max-w-xl">
+      <div className="relative h-full flex flex-col justify-end p-4 max-w-full">
+        <h1 className="text-2xl font-bold mb-1 animate-fade-in line-clamp-2">{title}</h1>
+        <p className="text-xs text-muted-foreground mb-3 line-clamp-2 max-w-full">
           {description}
         </p>
-        <div className="flex flex-wrap gap-4">
-          <Button asChild className="bg-white hover:bg-white/80 text-black">
+        <div className="flex space-x-3">
+          <Button asChild size="sm" className="bg-white hover:bg-white/80 text-black">
             <Link to={`/watch/${videoId}`}>
-              <Play className="mr-2 h-4 w-4" />
+              <Play className="mr-1 h-3 w-3" />
               Play
             </Link>
           </Button>
-          <Button variant="outline" asChild>
+          <Button variant="outline" size="sm" asChild>
             <Link to={`/details/${videoId}`}>More Info</Link>
           </Button>
         </div>

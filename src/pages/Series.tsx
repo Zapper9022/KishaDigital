@@ -97,13 +97,15 @@ const Series = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      <main className="pt-24 px-6 md:px-12 pb-24">
-        <h1 className="text-3xl font-bold mb-8">Series</h1>
+      <main className="pt-16 pb-16">
+        <h1 className="text-xl font-bold px-4 mb-4">Series</h1>
         
-        <ContentRow title="Trending Now" items={trendingSeries} />
-        <ContentRow title="Marvel Series" items={marvelSeries} />
-        <ContentRow title="Star Wars Series" items={starWarsSeries} />
-        <ContentRow title="National Geographic" items={natGeoSeries} />
+        <div className="px-2">
+          <ContentRow title="Trending Now" items={trendingSeries} />
+          <ContentRow title="Marvel Series" items={marvelSeries} />
+          <ContentRow title="Star Wars Series" items={starWarsSeries} />
+          <ContentRow title="National Geographic" items={natGeoSeries} />
+        </div>
       </main>
     </div>
   );
