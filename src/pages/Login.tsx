@@ -18,15 +18,10 @@ const Login = () => {
     setTimeout(() => {
       setLoading(false);
       
-      // For demo purposes, let's simulate a successful login with Facebook and Apple
-      // and a failed login with Google
-      if (provider === 'google') {
-        setError("Google login failed. Please try again.");
-        toast.error("Google login failed. Please try again.");
-      } else {
-        toast.success(`Successfully logged in with ${provider}`);
-        navigate('/');
-      }
+      // For now, simulate successful login for all providers
+      // Until we implement Supabase Auth
+      toast.success(`Successfully logged in with ${provider}`);
+      navigate('/');
     }, 1000);
   };
 
@@ -36,7 +31,7 @@ const Login = () => {
       <div className="w-full max-w-md flex flex-col items-center mb-10">
         <div className="bg-white p-4 rounded-2xl mb-6 shadow-lg glow">
           <img 
-            src="/lovable-uploads/84b7b08e-55e8-445d-9e25-267d3f8558cb.png" 
+            src="/lovable-uploads/421a8d23-09ea-449a-8bd5-e93b802dd815.png" 
             alt="KISAH² DIGITAL Logo" 
             className="w-20 h-20 object-contain"
           />
