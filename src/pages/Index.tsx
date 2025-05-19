@@ -124,22 +124,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
+      <Hero
+        title={featuredContent.title}
+        description={featuredContent.description}
+        imageUrl={featuredContent.imageUrl}
+        videoId={featuredContent.videoId}
+      />
       
-      <main className="pb-16 pt-4">
-        <Hero
-          title={featuredContent.title}
-          description={featuredContent.description}
-          imageUrl={featuredContent.imageUrl}
-          videoId={featuredContent.videoId}
-        />
-        
-        <div className="px-2">
-          <ContentRow title="Trending Now" items={trendingNow} />
-          <ContentRow title="New Releases" items={newReleases} />
-          <ContentRow title="Recommended For You" items={recommended} />
-        </div>
-      </main>
+      <div className="px-2">
+        <ContentRow title="Trending Now" items={trendingNow} />
+        <ContentRow title="New Releases" items={newReleases} />
+        <ContentRow title="Recommended For You" items={recommended} />
+      </div>
+      
+      <Navigation />
     </div>
   );
 };

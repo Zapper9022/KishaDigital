@@ -12,6 +12,7 @@ import Search from "./pages/Search";
 import Profile from "./pages/Profile";
 import Details from "./pages/Details";
 import Watch from "./pages/Watch";
+import Login from "./pages/Login";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/movies" element={<Movies />} />
             <Route path="/series" element={<Series />} />
             <Route path="/search" element={<Search />} />

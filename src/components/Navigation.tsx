@@ -17,7 +17,7 @@ const Navigation = () => {
         <NavItem to="/movies" icon={<Film className="w-5 h-5" />} title="Movies" isActive={isActive("/movies")} />
         <NavItem to="/series" icon={<Tv className="w-5 h-5" />} title="Series" isActive={isActive("/series")} />
         <NavItem to="/search" icon={<Search className="w-5 h-5" />} title="Search" isActive={isActive("/search")} />
-        <NavItem to="/profile" icon={<User className="w-5 h-5" />} title="Profile" isActive={isActive("/profile")} />
+        <NavItem to="/login" icon={<User className="w-5 h-5" />} title="Profile" isActive={isActive("/login") || isActive("/profile")} />
       </div>
     </>
   );
@@ -37,7 +37,7 @@ const NavItem = ({ to, icon, title, isActive }: NavItemProps) => {
       className={cn(
         "flex flex-col items-center py-2 px-3",
         isActive 
-          ? "text-kisah-primary" 
+          ? "text-[#FF6B6B]" 
           : "text-muted-foreground"
       )}
     >
