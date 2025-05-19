@@ -49,7 +49,7 @@
   }
 
   body {
-    @apply bg-kisah-dark text-foreground;
+    @apply bg-[#000529] text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     touch-action: manipulation;
   }
@@ -102,3 +102,4 @@
 .fade-in {
   animation: fadeIn 0.3s ease-out;
 }
+

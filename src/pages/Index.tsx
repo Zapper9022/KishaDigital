@@ -5,116 +5,116 @@ import Hero from "@/components/Hero";
 import ContentRow, { ContentItem } from "@/components/ContentRow";
 
 const Index = () => {
-  // In a real app, this data would come from an API
+  // Featured content with the uploaded image
   const featuredContent = {
-    title: "Moon Knight",
-    description: "When Steven Grant, a mild-mannered gift-shop employee, becomes plagued with blackouts and memories of another life, he discovers he has dissociative identity disorder.",
-    imageUrl: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    videoId: "moon-knight-1",
+    title: "Bayang-Bayang dalam Gambar",
+    description: "A haunting tale of shadows from the past that resurface in mysterious ways.",
+    imageUrl: "/lovable-uploads/569c1dc5-733c-439c-a5b3-6b302e4f87ad.png",
+    videoId: "bayang-1",
   };
 
   const trendingNow: ContentItem[] = [
     {
       id: "trend-1",
-      title: "The Mandalorian",
+      title: "Boyfriend Aku Anak Makcik Aku",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/bbbb3df6-0b6b-455b-996c-b3e27c67e0f5.png",
     },
     {
       id: "trend-2",
-      title: "Loki",
+      title: "Curi Kerusi, Curi Hati",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/11bc8e14-493a-486d-b781-30759d35efbb.png",
     },
     {
       id: "trend-3",
-      title: "WandaVision",
+      title: "Bilik 207, Bilik 208",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/85ef2f5e-dccd-42a8-b4b1-75d6c5380742.png",
     },
     {
       id: "trend-4",
-      title: "The Falcon and the Winter Soldier",
+      title: "Bayang-Bayang dalam Gambar",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/569c1dc5-733c-439c-a5b3-6b302e4f87ad.png",
     },
     {
       id: "trend-5",
-      title: "Hawkeye",
+      title: "Suami Dari Dimensi Lain",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/0f47a53f-3d82-430e-b451-2da28e8a776e.png",
     },
     {
       id: "trend-6",
-      title: "What If...?",
+      title: "Kapten Dekat Kokpit, Skandal Dekat Galley",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/bb868ed8-7c2d-4250-9220-41795d203650.png",
     },
   ];
 
   const newReleases: ContentItem[] = [
     {
       id: "new-1",
-      title: "Doctor Strange in the Multiverse of Madness",
+      title: "Suami Dari Dimensi Lain",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/0f47a53f-3d82-430e-b451-2da28e8a776e.png",
     },
     {
       id: "new-2",
-      title: "Turning Red",
+      title: "Kapten Dekat Kokpit, Skandal Dekat Galley",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/bb868ed8-7c2d-4250-9220-41795d203650.png",
     },
     {
       id: "new-3",
-      title: "Lightyear",
+      title: "Boyfriend Aku Anak Makcik Aku",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/bbbb3df6-0b6b-455b-996c-b3e27c67e0f5.png",
     },
     {
       id: "new-4",
-      title: "Encanto",
+      title: "Curi Kerusi, Curi Hati",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/11bc8e14-493a-486d-b781-30759d35efbb.png",
     },
     {
       id: "new-5",
-      title: "Chip 'n Dale: Rescue Rangers",
+      title: "Bilik 207, Bilik 208",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/85ef2f5e-dccd-42a8-b4b1-75d6c5380742.png",
     },
   ];
 
   const recommended: ContentItem[] = [
     {
       id: "rec-1",
-      title: "Star Wars: The Book of Boba Fett",
+      title: "Bayang-Bayang dalam Gambar",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/569c1dc5-733c-439c-a5b3-6b302e4f87ad.png",
     },
     {
       id: "rec-2",
-      title: "The Simpsons",
+      title: "Bilik 207, Bilik 208",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/85ef2f5e-dccd-42a8-b4b1-75d6c5380742.png",
     },
     {
       id: "rec-3",
-      title: "National Geographic: The World According to Jeff Goldblum",
+      title: "Kapten Dekat Kokpit, Skandal Dekat Galley",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/bb868ed8-7c2d-4250-9220-41795d203650.png",
     },
     {
       id: "rec-4",
-      title: "Pixar's Soul",
+      title: "Boyfriend Aku Anak Makcik Aku",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/bbbb3df6-0b6b-455b-996c-b3e27c67e0f5.png",
     },
     {
       id: "rec-5",
-      title: "The Mighty Ducks: Game Changers",
+      title: "Curi Kerusi, Curi Hati",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/11bc8e14-493a-486d-b781-30759d35efbb.png",
     },
   ];
 
@@ -126,7 +126,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      <main className="pb-16 pt-12">
+      <main className="pb-16 pt-4">
         <Hero
           title={featuredContent.title}
           description={featuredContent.description}

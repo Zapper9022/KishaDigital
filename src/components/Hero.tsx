@@ -12,7 +12,7 @@ interface HeroProps {
 
 const Hero = ({ title, description, imageUrl, videoId }: HeroProps) => {
   return (
-    <div className="relative h-[50vh] w-full mb-4">
+    <div className="relative h-[60vh] w-full mb-4">
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -20,7 +20,7 @@ const Hero = ({ title, description, imageUrl, videoId }: HeroProps) => {
           backgroundImage: `url(${imageUrl})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-kisah-dark via-kisah-dark/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#000529] via-[#000529]/80 to-transparent" />
       </div>
 
       {/* Content */}

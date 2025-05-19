@@ -4,88 +4,88 @@ import Navigation from "@/components/Navigation";
 import ContentRow, { ContentItem } from "@/components/ContentRow";
 
 const Movies = () => {
-  // Mock movie categories and data
+  // Movie categories using uploaded images
   const actionMovies: ContentItem[] = [
     {
       id: "action-1",
-      title: "Doctor Strange in the Multiverse of Madness",
+      title: "Bayang-Bayang dalam Gambar",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/569c1dc5-733c-439c-a5b3-6b302e4f87ad.png",
     },
     {
       id: "action-2",
-      title: "Black Widow",
+      title: "Suami Dari Dimensi Lain",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/0f47a53f-3d82-430e-b451-2da28e8a776e.png",
     },
     {
       id: "action-3",
-      title: "Shang-Chi",
+      title: "Kapten Dekat Kokpit, Skandal Dekat Galley",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/bb868ed8-7c2d-4250-9220-41795d203650.png",
     },
   ];
   
-  const animatedMovies: ContentItem[] = [
+  const romanceMovies: ContentItem[] = [
     {
-      id: "animated-1",
-      title: "Turning Red",
+      id: "romance-1",
+      title: "Boyfriend Aku Anak Makcik Aku",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/bbbb3df6-0b6b-455b-996c-b3e27c67e0f5.png",
     },
     {
-      id: "animated-2",
-      title: "Lightyear",
+      id: "romance-2",
+      title: "Bilik 207, Bilik 208",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/85ef2f5e-dccd-42a8-b4b1-75d6c5380742.png",
     },
     {
-      id: "animated-3",
-      title: "Encanto",
+      id: "romance-3",
+      title: "Curi Kerusi, Curi Hati",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/11bc8e14-493a-486d-b781-30759d35efbb.png",
+    },
+  ];
+  
+  const dramaMovies: ContentItem[] = [
+    {
+      id: "drama-1",
+      title: "Curi Kerusi, Curi Hati",
+      type: "movie",
+      imageUrl: "/lovable-uploads/11bc8e14-493a-486d-b781-30759d35efbb.png",
+    },
+    {
+      id: "drama-2",
+      title: "Bayang-Bayang dalam Gambar",
+      type: "movie",
+      imageUrl: "/lovable-uploads/569c1dc5-733c-439c-a5b3-6b302e4f87ad.png",
+    },
+    {
+      id: "drama-3",
+      title: "Suami Dari Dimensi Lain",
+      type: "movie",
+      imageUrl: "/lovable-uploads/0f47a53f-3d82-430e-b451-2da28e8a776e.png",
     },
   ];
   
   const comedyMovies: ContentItem[] = [
     {
       id: "comedy-1",
-      title: "Free Guy",
+      title: "Boyfriend Aku Anak Makcik Aku",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/bbbb3df6-0b6b-455b-996c-b3e27c67e0f5.png",
     },
     {
       id: "comedy-2",
-      title: "Chip 'n Dale: Rescue Rangers",
+      title: "Bilik 207, Bilik 208",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/85ef2f5e-dccd-42a8-b4b1-75d6c5380742.png",
     },
     {
       id: "comedy-3",
-      title: "The Bob's Burgers Movie",
+      title: "Kapten Dekat Kokpit, Skandal Dekat Galley",
       type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    },
-  ];
-  
-  const documentaries: ContentItem[] = [
-    {
-      id: "doc-1",
-      title: "The Rescue",
-      type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    },
-    {
-      id: "doc-2",
-      title: "Summer of Soul",
-      type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    },
-    {
-      id: "doc-3",
-      title: "The Beatles: Get Back",
-      type: "movie",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/bb868ed8-7c2d-4250-9220-41795d203650.png",
     },
   ];
 
@@ -97,14 +97,14 @@ const Movies = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      <main className="pt-16 pb-16">
+      <main className="pt-4 pb-16">
         <h1 className="text-xl font-bold px-4 mb-4">Movies</h1>
         
         <div className="px-2">
-          <ContentRow title="Action & Adventure" items={actionMovies} />
-          <ContentRow title="Animated" items={animatedMovies} />
+          <ContentRow title="Action & Thriller" items={actionMovies} />
+          <ContentRow title="Romance" items={romanceMovies} />
+          <ContentRow title="Drama" items={dramaMovies} />
           <ContentRow title="Comedy" items={comedyMovies} />
-          <ContentRow title="Documentaries" items={documentaries} />
         </div>
       </main>
     </div>

@@ -4,88 +4,88 @@ import Navigation from "@/components/Navigation";
 import ContentRow, { ContentItem } from "@/components/ContentRow";
 
 const Series = () => {
-  // Mock series categories and data
+  // Series categories using uploaded images
   const trendingSeries: ContentItem[] = [
     {
       id: "trending-1",
-      title: "Moon Knight",
+      title: "Bayang-Bayang dalam Gambar",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/569c1dc5-733c-439c-a5b3-6b302e4f87ad.png",
     },
     {
       id: "trending-2",
-      title: "The Mandalorian",
+      title: "Suami Dari Dimensi Lain",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/0f47a53f-3d82-430e-b451-2da28e8a776e.png",
     },
     {
       id: "trending-3",
-      title: "Obi-Wan Kenobi",
+      title: "Kapten Dekat Kokpit, Skandal Dekat Galley",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/bb868ed8-7c2d-4250-9220-41795d203650.png",
     },
   ];
   
-  const marvelSeries: ContentItem[] = [
+  const dramaSeries: ContentItem[] = [
     {
-      id: "marvel-1",
-      title: "Loki",
+      id: "drama-1",
+      title: "Curi Kerusi, Curi Hati",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/11bc8e14-493a-486d-b781-30759d35efbb.png",
     },
     {
-      id: "marvel-2",
-      title: "WandaVision",
+      id: "drama-2",
+      title: "Boyfriend Aku Anak Makcik Aku",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/bbbb3df6-0b6b-455b-996c-b3e27c67e0f5.png",
     },
     {
-      id: "marvel-3",
-      title: "The Falcon and the Winter Soldier",
+      id: "drama-3",
+      title: "Bayang-Bayang dalam Gambar",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    },
-  ];
-  
-  const starWarsSeries: ContentItem[] = [
-    {
-      id: "starwars-1",
-      title: "The Book of Boba Fett",
-      type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    },
-    {
-      id: "starwars-2",
-      title: "The Bad Batch",
-      type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    },
-    {
-      id: "starwars-3",
-      title: "Star Wars: Visions",
-      type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/569c1dc5-733c-439c-a5b3-6b302e4f87ad.png",
     },
   ];
   
-  const natGeoSeries: ContentItem[] = [
+  const romanceSeries: ContentItem[] = [
     {
-      id: "natgeo-1",
-      title: "The World According to Jeff Goldblum",
+      id: "romance-1",
+      title: "Boyfriend Aku Anak Makcik Aku",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/bbbb3df6-0b6b-455b-996c-b3e27c67e0f5.png",
     },
     {
-      id: "natgeo-2",
-      title: "Secrets of the Whales",
+      id: "romance-2",
+      title: "Bilik 207, Bilik 208",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/85ef2f5e-dccd-42a8-b4b1-75d6c5380742.png",
     },
     {
-      id: "natgeo-3",
-      title: "Limitless with Chris Hemsworth",
+      id: "romance-3",
+      title: "Curi Kerusi, Curi Hati",
       type: "series",
-      imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      imageUrl: "/lovable-uploads/11bc8e14-493a-486d-b781-30759d35efbb.png",
+    },
+  ];
+  
+  const mysterySeries: ContentItem[] = [
+    {
+      id: "mystery-1",
+      title: "Bayang-Bayang dalam Gambar",
+      type: "series",
+      imageUrl: "/lovable-uploads/569c1dc5-733c-439c-a5b3-6b302e4f87ad.png",
+    },
+    {
+      id: "mystery-2",
+      title: "Suami Dari Dimensi Lain",
+      type: "series",
+      imageUrl: "/lovable-uploads/0f47a53f-3d82-430e-b451-2da28e8a776e.png",
+    },
+    {
+      id: "mystery-3",
+      title: "Bilik 207, Bilik 208",
+      type: "series",
+      imageUrl: "/lovable-uploads/85ef2f5e-dccd-42a8-b4b1-75d6c5380742.png",
     },
   ];
 
@@ -97,14 +97,14 @@ const Series = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      <main className="pt-16 pb-16">
+      <main className="pt-4 pb-16">
         <h1 className="text-xl font-bold px-4 mb-4">Series</h1>
         
         <div className="px-2">
           <ContentRow title="Trending Now" items={trendingSeries} />
-          <ContentRow title="Marvel Series" items={marvelSeries} />
-          <ContentRow title="Star Wars Series" items={starWarsSeries} />
-          <ContentRow title="National Geographic" items={natGeoSeries} />
+          <ContentRow title="Drama Series" items={dramaSeries} />
+          <ContentRow title="Romance Series" items={romanceSeries} />
+          <ContentRow title="Mystery & Thriller" items={mysterySeries} />
         </div>
       </main>
     </div>

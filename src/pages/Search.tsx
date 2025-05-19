@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import { Search as SearchIcon } from "lucide-react";
@@ -5,43 +6,43 @@ import { Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { ContentItem } from "@/components/ContentRow";
 
-// Mock content data for search
+// Mock content data for search using the uploaded images
 const mockAllContent: ContentItem[] = [
   {
-    id: "moon-knight-1",
-    title: "Moon Knight",
+    id: "bayang-1",
+    title: "Bayang-Bayang dalam Gambar",
     type: "series",
-    imageUrl: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    imageUrl: "/lovable-uploads/569c1dc5-733c-439c-a5b3-6b302e4f87ad.png",
   },
   {
-    id: "trend-1",
-    title: "The Mandalorian",
+    id: "suami-1",
+    title: "Suami Dari Dimensi Lain",
     type: "series",
-    imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    imageUrl: "/lovable-uploads/0f47a53f-3d82-430e-b451-2da28e8a776e.png",
   },
   {
-    id: "trend-2",
-    title: "Loki",
+    id: "kapten-1",
+    title: "Kapten Dekat Kokpit, Skandal Dekat Galley",
     type: "series",
-    imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    imageUrl: "/lovable-uploads/bb868ed8-7c2d-4250-9220-41795d203650.png",
   },
   {
-    id: "trend-3",
-    title: "WandaVision",
+    id: "boyfriend-1",
+    title: "Boyfriend Aku Anak Makcik Aku",
     type: "series",
-    imageUrl: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    imageUrl: "/lovable-uploads/bbbb3df6-0b6b-455b-996c-b3e27c67e0f5.png",
   },
   {
-    id: "new-1",
-    title: "Doctor Strange in the Multiverse of Madness",
+    id: "bilik-1",
+    title: "Bilik 207, Bilik 208",
     type: "movie",
-    imageUrl: "https://images.unsplash.com/photo-1518877593221-1f28583780b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    imageUrl: "/lovable-uploads/85ef2f5e-dccd-42a8-b4b1-75d6c5380742.png",
   },
   {
-    id: "new-2",
-    title: "Turning Red",
+    id: "curi-1",
+    title: "Curi Kerusi, Curi Hati",
     type: "movie",
-    imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    imageUrl: "/lovable-uploads/11bc8e14-493a-486d-b781-30759d35efbb.png",
   },
 ];
 
@@ -71,7 +72,7 @@ const Search = () => {
     <div className="min-h-screen">
       <Navigation />
       
-      <main className="pt-16 pb-16 px-4">
+      <main className="pt-4 pb-16 px-4">
         <h1 className="text-xl font-bold mb-4">Search</h1>
         
         <div className="relative mb-6">
@@ -102,6 +103,7 @@ const Search = () => {
                     src={item.imageUrl}
                     alt={item.title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 flex items-end transition-opacity">
                     <div className="p-2">
